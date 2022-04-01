@@ -14,6 +14,7 @@ const xss = require("xss-clean");
 const hpp = require("hpp");
 const path = require("path");
 const cookieParser = require("cookie-parser");
+const compression = require("compression");
 
 //Server side rendering using pug....
 app.set("view engine", "pug");
@@ -29,6 +30,8 @@ app.use(
     whitelist: ["duration"],
   })
 );
+
+app.use(compression());
 
 const limiter = rateLimit({
   max: 100,

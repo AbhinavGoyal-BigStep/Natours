@@ -62,7 +62,7 @@ const getStatics = async (req, res) => {
       data: user,
     });
   } catch (error) {
-    console.log(error);
+    // console.log(error);
     res.status(404).json({
       ststus: "fail",
       error,
