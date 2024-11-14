@@ -48,6 +48,7 @@ app.use(`${baseURL}/tours`, tourRouter);
 app.use(`${baseURL}/users`, userRouter);
 app.use(`${baseURL}/reviews`, reviewRouter);
 app.use(`${baseURL}/bookings`, bookingRouter);
+app.use(`${baseURL}/customer`, bookingRouter);
 
 app.all("*", (req, res, next) => {
   next(new AppError(`can not find ${req.originalUrl} url on this server`, 404));
